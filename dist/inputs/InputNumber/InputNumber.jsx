@@ -24,7 +24,8 @@ const InputNumber = (props) => {
       return React.cloneElement(child, {
         onChange:props.onChange,
         value:props.value,
-        placeholder: props.placeholder
+        placeholder: props.placeholder,
+        name: props.name
       });
     })}
     </div>

@@ -4,7 +4,8 @@ const InputNumberField = (props) => {
   const itemProps = {
     onChange: (e) => props.onChange(e.target.value),
     value: props.value,
-    placeholder: props.placeholder
+    placeholder: props.placeholder,
+    name: props.name
   }
 
   return (

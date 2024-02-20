@@ -10,7 +10,8 @@
   --stepper-width: max(14%, 30px);
   
   position: relative;
-
+  display: block;
+  margin: 0 0 0.5em;
   width: fit-content;
   border-radius: 0.5em;
   background: radial-gradient(
