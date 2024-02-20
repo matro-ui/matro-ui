@@ -7,3 +7,4 @@ export {
   InputDecrementStepper,
   InputIncrementStepper
 } from './dist/inputs/InputNumber';
+export { default as InputText } from './dist/inputs/InputText';
