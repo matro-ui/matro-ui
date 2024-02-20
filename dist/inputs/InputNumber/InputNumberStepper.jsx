@@ -2,11 +2,12 @@ import React from 'react'
 import * as s from "./index.module.css";
 
 const InputNumberStepper = (props) => {
-  const onDecrement = () => {
-    props.onChange(props.value - 1)
-  }
+
   const onIncrement = () => {
-    props.onChange(props.value + 1)
+    props.onChange((isNaN(parseInt(props.value)) ? 0 : parseInt(props.value) + 1))
+  }
+  const onDecrement = () => {
+    props.onChange((isNaN(parseInt(props.value)) ? 0 : parseInt(props.value) - 1))
   }
 
   return (
@@ -22,10 +23,12 @@ const InputNumberStepper = (props) => {
 }
 
 const InputDecrementStepper = ({onDecrement}) => 
- <button onClick={onDecrement}>▼</button>
+ <button onClick={onDecrement}>
+<span>▼</span></button>
 
 const InputIncrementStepper = (props) => 
- <button onClick={props.onIncrement}>▲</button>
+ <button onClick={props.onIncrement}>
+<span>▲</span></button>
 
 
 export {

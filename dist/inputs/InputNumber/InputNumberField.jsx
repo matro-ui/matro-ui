@@ -3,7 +3,8 @@ import React from "react";
 const InputNumberField = (props) => {
   const itemProps = {
     onChange: (e) => props.onChange(e.target.value),
-    value: props.value
+    value: props.value,
+    placeholder: props.placeholder
   }
 
   return (

@@ -7,7 +7,7 @@ const InputNumber = (props) => {
   const inlineStyles = {
     '--hue': colorToHue[props.color] ? colorToHue[props.color] 
               : props.hue ? props.hue 
-              : 100,
+              : 160,
   }
 
   return (
@@ -24,6 +24,7 @@ const InputNumber = (props) => {
       return React.cloneElement(child, {
         onChange:props.onChange,
         value:props.value,
+        placeholder: props.placeholder
       });
     })}
     </div>
