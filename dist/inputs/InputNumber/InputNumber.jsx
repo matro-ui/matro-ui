@@ -14,14 +14,16 @@ const InputNumber = (props) => {
     <div 
     className={classNames({
       "mtui-inputnum": true,
-      [s.mtui_inputnum]: true,
+      [s.mtui_inputtype]: true,
       [s["mtui_color_" + props.color]]: props.color,
       [props.className]: !!props.className,
     })}
     style={{...inlineStyles, ...props.style}}
     >
      {React.Children.map(props.children, (child) => {
+      console.log(child.type.displayName);
       return React.cloneElement(child, {
+        childProps: child.props,
         onChange:props.onChange,
         value:props.value,
         placeholder: props.placeholder,
