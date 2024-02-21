@@ -7,5 +7,10 @@ export {
   InputDecrementStepper,
   InputIncrementStepper
 } from './dist/inputs/InputNumber';
-export { InputText, InputTextField } from './dist/inputs/InputText';
+export {
+  InputText,
+  InputTextField,
+  InputChildPrefix,
+  InputChildSelect
+} from './dist/inputs/InputText';
 export { LabelText } from "./dist/inputs/LabelText"
