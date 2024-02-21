@@ -7,7 +7,7 @@
   --text: hwb(var(--hue) calc(var(--saturation) - 20%) 40%);
   --placeholder: hwb(var(--hue) calc(var(--saturation) - 0%) 20%);
   --border: hwb(var(--hue) var(--saturation) -10%);
-  --stepper-width: max(14%, 30px);
+  --stepper-width: max(14%, 28px);
   
   position: relative;
   display: block;
@@ -35,7 +35,7 @@
 .mtui_inputnum input {
   width: 100%;
   min-height: 40px;
-  padding: 0.5em 0.8em;
+  padding: 0.5em  var(--stepper-width) 0.5em 0.8em;
 
   font-size: 1.1em;
   color: var(--text);
@@ -126,7 +126,8 @@
   height: 100%;
   width: var(--stepper-width, 14%);
   padding: 0;
-  
+  box-sizing: border-box;
+  border-left: 2px solid rgba(0, 0, 0, 0.0);
 }
 
 .stepper:hover {

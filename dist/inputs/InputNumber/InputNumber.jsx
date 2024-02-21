@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from "../../../tools/classNames";
-import * as s from "./index.module.css";
+import * as s from "../index.module.css";
 import { colorToHue } from '../../../context';
 
 const InputNumber = (props) => {

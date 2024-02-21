@@ -1,5 +1,5 @@
 import React from 'react'
-import * as s from "./index.module.css";
+import * as s from "../../index.module.css";
 
 const InputNumberStepper = (props) => {
 

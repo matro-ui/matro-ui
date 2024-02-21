@@ -1,25 +1,9 @@
-import React from "react";
-import classNames from "../../../tools/classNames";
-import * as s from "./index.module.css";
+import React from 'react'
 
-const Button = (props) => {
-  const inlineStyles = {
-    '--hue': props.hue ?? 100
-  }
+const Breadcrumbs = () => {
   return (
-  <button 
-    {...props} 
-    className={classNames({
-      "mtui-button": true,
-      [s.mtui_button]: true,
-      [props.className]: !!props.className,
-    })}
-    style={{...inlineStyles, ...props.style}}
-  >
-    {props?.children}
-  </button>
-  );
-};
+    <div>Breadcrumbs</div>
+  )
+}
 
-export default Button;
-
+export default Breadcrumbs
