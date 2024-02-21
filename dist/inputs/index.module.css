@@ -1,6 +1,6 @@
 
 /* INPUT NUMBER STYLES */
-.mtui_inputnum {
+.mtui_inputtype {
   --saturation: 55%;
   --hue: 160;
   --fill: hwb(var(--hue) var(--saturation) 2%);
@@ -10,7 +10,7 @@
   --stepper-width: max(14%, 28px);
   
   position: relative;
-  display: block;
+  display: flex;
   margin: 0 0 0.5em;
   width: fit-content;
   border-radius: 0.5em;
@@ -32,10 +32,10 @@
   overflow: hidden;
 }
 
-.mtui_inputnum input {
+.mtui_inputtype input {
   width: 100%;
   min-height: 40px;
-  padding: 0.5em  var(--stepper-width) 0.5em 0.8em;
+  padding: 0.5em 0.1em 0.5em 0.8em;
 
   font-size: 1.1em;
   color: var(--text);
@@ -48,54 +48,54 @@
   -webkit-appearance: none;
 }
 
-.mtui_inputnum input::placeholder {
+.mtui_inputtype input::placeholder {
   color: var(--placeholder);
 }
 
-.mtui_inputnum input::-webkit-outer-spin-button,
-.mtui_inputnum input::-webkit-inner-spin-button {
+.mtui_inputtype input::-webkit-outer-spin-button,
+.mtui_inputtype input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.mtui_inputnum input:focus,
-.mtui_inputnum input:hover,
-.mtui_inputnum input:active {
+.mtui_inputtype input:focus,
+.mtui_inputtype input:hover,
+.mtui_inputtype input:active {
   outline: none;
 }
 
-.mtui_inputnum.color-red {
+.mtui_inputtype.color-red {
   --hue: 0deg;
 }
-.mtui_inputnum.color-green {
+.mtui_inputtype.color-green {
   --hue: 110deg;
 }
-.mtui_inputnum.color-blue {
+.mtui_inputtype.color-blue {
   --hue: 210deg;
 }
 
-.mtui_inputnum:hover {
+.mtui_inputtype:hover {
   /* --saturation: 60%; */
   box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
   border: 0.2px solid var(--border);
 }
 
-.mtui_inputnum:hover::after {
+.mtui_inputtype:hover::after {
   height: 30%;
 }
 
-.mtui_inputnum:active::after {
+.mtui_inputtype:active::after {
   height: 40%;
   transition: 0ms;
 }
 
-.mtui_inputnum:active {
+.mtui_inputtype:active {
   transform: scale(0.99);
   transition: transform 0ms;
 }
 
-.mtui_inputnum:active,
-.mtui_inputnum:focus,
-.mtui_inputnum:hover {
+.mtui_inputtype:active,
+.mtui_inputtype:focus,
+.mtui_inputtype:hover {
   outline: none;
 }
 
@@ -116,7 +116,10 @@
 }
 
 .stepper {
-  position: absolute;
+  position: static;
+  flex: 0 0 var(--stepper-width);
+  align-self: stretch;
+  min-height: 40px;
 
   display: flex;
   flex-direction: column;
@@ -179,4 +182,42 @@
 
 .stepper button:nth-child(2) span {
   transform: translateY(-2px);
+}
+
+
+.inputPrefix {
+  user-select: none;
+  padding: 0.5em 0.2em 0.5em 0.8em;
+}
+
+.inputPrefix ~ input {
+  padding-left: 0;
+}
+
+.inputSelect {
+  font: inherit;
+  font-size: 0.8em;
+  font-weight: 500;
+  appearance: none;
+  color: var(--text);
+  width: calc( var(--stepper-width) * 1.5);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.02);
+  cursor: pointer;
+  border: none;
+  border-right: 2px solid rgba(0, 0, 0, 0.03);
+  transition: background 200ms ease;
+}
+
+input ~ .inputSelect {
+  border: none;
+  border-left: 2px solid rgba(0, 0, 0, 0.03);
+}
+
+.inputSelect:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.inputSelect:focus{
+  outline: none;
 }
