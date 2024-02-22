@@ -5,6 +5,7 @@ import * as s from "../../index.module.css";
 const InputChildButton = (props) => {
   const itemProps = { ...props };
   delete itemProps.children;
+  delete itemProps.childProps;
 
   if(props.children) return (
     <button 
