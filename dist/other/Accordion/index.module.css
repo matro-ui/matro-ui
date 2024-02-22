@@ -1,0 +1,18 @@
+.accordion {
+  padding: 1em 0;
+}
+
+.button {
+  width: 100%;
+  text-align: left;
+  min-height: 40px;
+}
+
+.visible {
+}
+
+
+.hidden {
+  max-height: 0;
+  overflow: hidden;
+}
