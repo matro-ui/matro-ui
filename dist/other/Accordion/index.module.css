@@ -3,16 +3,74 @@
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   width: 100%;
+  margin: 0;
+  padding: 0 1.2em;
   text-align: left;
   min-height: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #eee;
+  font: inherit;
+  cursor: pointer;
+  transition: background 200ms ease;
+}
+
+.button:hover {
+  border-radius: 0.3em;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.contentitem {
+  transition: opacity 400ms ease;
 }
 
 .visible {
+  color: #484848;
+  padding: 0.5em 1em;
+  max-height: 500px;
+  overflow-y: scroll;
+  opacity: 1;
+}
+
+.hidden {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.icon {
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+.icon svg {
+  display: block;
+  margin: 0;
+}
+
+.icon,
+.icon svg {
+  width: 0.9em;
+  height: 0.9em;
+  transition: transform 100ms ease;
 }
 
 
-.hidden {
-  max-height: 0;
-  overflow: hidden;
+.button_opened .children {
+  font-weight: 500;
+  user-select: none;
+}
+.button_opened .icon {
+  transform: rotate(180deg);
+}
+
+.button_opened .icon svg {
+  margin-top: 1px;
 }

@@ -10,15 +10,14 @@ const AccordionItem = (props) => {
   return (
     <article>
       {React.Children.map((props.children), (child, i) => {
-        const childProps = {...child.props}
+        const childProps = {...child.props, isOpened}
 
         if(child.type.displayName === "AccordionButton") 
           childProps.onClick = toggleOpened;
         else {
           childProps["data-visible"] = isOpened
-          childProps.className = isOpened ? 
-            childProps.className 
-            : childProps.className + " " + s.hidden
+          childProps.className = 
+            `mtui-accordion__item ${s.contentitem} ${isOpened ? s.visible : s.hidden}`
         }
 
         return React.cloneElement(child, childProps);
