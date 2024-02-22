@@ -1,0 +1,47 @@
+.code {
+  --saturation: 65%;
+  --hue: 160;
+  --fill: hwb(var(--hue) var(--saturation) 2%);
+  --text: hwb(var(--hue) calc(var(--saturation) - 50%) 50%);
+  display: inline-block;
+  color: var(--text, #000);
+  background-color: var(--fill, #eee);
+  padding: 0.02em 0.3em 0.05em;
+  border-radius: 0.18em;
+  font-size: 1em;
+  line-height: 150%;
+}
+
+.code__color_gray {
+  --saturation: 92%;
+  --hue: 210;
+  --fill: hwb(var(--hue) var(--saturation) 3.1%);
+  --text: hwb(calc(var(--hue) + 10) calc(var(--saturation) - 70%) 83%);
+}
+.code__color_black {
+  --saturation: 92%;
+  --hue: 210;
+  --text: hwb(var(--hue) var(--saturation) 3.1%);
+  --fill: hwb(calc(var(--hue) + 10) calc(var(--saturation) - 70%) 83%);
+}
+.code__color_green {
+  --hue: 110;
+}
+.code__color_purple {
+  --hue: 280;
+}
+.code__color_red {
+  --hue: 0;
+}
+.code__color_blue {
+  --hue: 210;
+}
+.code__color_teal {
+  --hue: 160;
+}
+.code__color_pink {
+  --hue: 210;
+}
+.code__color_yellow {
+  --hue: 56;
+}
