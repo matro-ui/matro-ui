@@ -1,15 +1,18 @@
 .code {
   --saturation: 65%;
   --hue: 160;
-  --fill: hwb(var(--hue) var(--saturation) 2%);
+  --fill: hwb(var(--hue) var(--saturation) 3%);
+  --border: hwb(var(--hue) var(--saturation) 2%);
   --text: hwb(var(--hue) calc(var(--saturation) - 50%) 50%);
   display: inline-block;
   color: var(--text, #000);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), transparent);
   background-color: var(--fill, #eee);
   padding: 0.02em 0.3em 0.05em;
   border-radius: 0.18em;
   font-size: 1em;
   line-height: 150%;
+  border: 1px solid var(--border);
 }
 
 .code__color_gray {
