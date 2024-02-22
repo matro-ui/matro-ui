@@ -16,3 +16,4 @@ export {
 } from './dist/inputs/InputText';
 export { LabelText } from "./dist/inputs/LabelText"
 export { Code } from "./dist/semantic/Code"
+export { Stack } from "./dist/layouts/Stack"
