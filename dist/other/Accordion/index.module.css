@@ -1,5 +1,6 @@
 .accordion {
   padding: 1em 0;
+  max-width: 500px;
 }
 
 .button {
@@ -26,11 +27,12 @@
 }
 
 .contentitem {
-  transition: opacity 400ms ease;
+  transition: opacity 500ms ease;
+  font-size: 0.82em;
 }
 
 .visible {
-  color: #484848;
+  color: #5c5e64;
   padding: 0.5em 1em;
   max-height: 500px;
   overflow-y: scroll;
@@ -63,7 +65,7 @@
 }
 
 
-.button_opened .children {
+.children {
   font-weight: 500;
   user-select: none;
 }

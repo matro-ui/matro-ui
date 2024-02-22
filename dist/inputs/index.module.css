@@ -24,7 +24,7 @@
   color: var(--text);
   cursor: pointer;
   border: 0.2px solid var(--border);
-  box-shadow: 0 2px 3px 0px hwb(var(--hue) 30% 21%);
+  box-shadow: 0 2px 3px 0px hwb(var(--hue) 40% 21%);
   transition: background-color 300ms ease, box-shadow 300ms ease,
     transform 100ms ease;
 
