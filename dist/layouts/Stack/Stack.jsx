@@ -18,7 +18,8 @@ const Stack = (props) => {
     className={classNames({
       ["stack"] : true,
       [s.stack]: true,
-      [s.row]: props.direction === "row",
+      [s.column]: props.column,
+      [s.stretch]: props.stretch,
       [itemProps.className]: itemProps.className
     })}
     style={inlineStyles}
