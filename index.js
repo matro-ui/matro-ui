@@ -10,7 +10,9 @@ export {
 export {
   InputText,
   InputTextField,
+  InputChild,
   InputChildPrefix,
   InputChildSelect
 } from './dist/inputs/InputText';
 export { LabelText } from "./dist/inputs/LabelText"
+export { Code } from "./dist/semantic/Code"
