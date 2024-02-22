@@ -2,19 +2,19 @@ import React from 'react'
 import * as s from "../../index.module.css";
 
 
-const InputChildIcon = (props) => {
+const InputChildButton = (props) => {
   const itemProps = { ...props };
   delete itemProps.children;
 
   if(props.children) return (
-    <div 
+    <button 
     {...itemProps}
-      className={s.inputChildIcon} 
+      className={s.inputChildButton} 
     >
      {props.children} 
-    </div>
+    </button>
   );
   return ""
 }
 
-export default InputChildIcon
+export default InputChildButton
