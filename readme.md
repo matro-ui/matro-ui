@@ -8,9 +8,7 @@
 <p align="center">
   <img alt="Bundle Size" src="https://badgen.net/bundlephobia/minzip/matro-ui@0.6.3"/>
   <img alt="Github Checks" src="https://badgen.net/github/checks/gerwld/matro-ui/main"/>
-  <a href="https://github.com/matro-ui/matro-ui/blob/main/LICENSE">
-    <img alt="MIT License" src="https://img.shields.io/github/license/gerwld/matro-ui"/>
-  </a>
+  <a href="https://github.com/matro-ui/matro-ui/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/gerwld/matro-ui"/></a>
   <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/matro-ui.svg?style=flat"/>
   <img alt="Github Stars" src="https://badgen.net/github/stars/gerwld/matro-ui" />
 </p>
