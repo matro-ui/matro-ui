@@ -4,7 +4,8 @@ import * as s from "./index.module.css";
 
 const Button = (props) => {
   const inlineStyles = {
-    '--hue': props.hue ?? 100
+    '--hue': props.hue ?? 100,
+    ...props.style
   }
   return (
   <button 
@@ -14,7 +15,7 @@ const Button = (props) => {
       [s.mtui_button]: true,
       [props.className]: !!props.className,
     })}
-    style={{...inlineStyles, ...props.style}}
+    style={inlineStyles}
   >
     {props?.children}
   </button>

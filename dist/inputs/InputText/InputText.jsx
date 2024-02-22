@@ -8,6 +8,8 @@ const InputText = (props) => {
     '--hue': colorToHue[props.color] ? colorToHue[props.color] 
               : props.hue ? props.hue 
               : 160,
+    
+    ...props.style,
   }
 
   return (
@@ -18,7 +20,7 @@ const InputText = (props) => {
       [s["mtui_color_" + props.color]]: props.color,
       [props.className]: !!props.className,
     })}
-    style={{...inlineStyles, ...props.style}}
+    style={inlineStyles}
     >
      {React.Children.map(props.children, (child) => {
       console.log(child);

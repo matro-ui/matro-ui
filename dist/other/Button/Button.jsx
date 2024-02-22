@@ -8,6 +8,7 @@ const Button = (props) => {
     '--hue': colorToHue[props.color] ? colorToHue[props.color] 
               : props.hue ? props.hue 
               : 100,
+    ...props.style
   }
   const childProps = {...props}
   delete childProps["isIcon"]
@@ -21,7 +22,7 @@ const Button = (props) => {
       [s.mtui_button__icon]: props.isIcon,
       [props.className]: !!props.className,
     })}
-    style={{...inlineStyles, ...props.style}}
+    style={inlineStyles}
   >
     {props?.children}
   </button>
