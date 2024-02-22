@@ -12,8 +12,15 @@ export {
   InputTextField,
   InputChild,
   InputChildPrefix,
-  InputChildSelect
+  InputChildSelect,
+  InputChildIcon,
+  InputChildButton,
 } from './dist/inputs/InputText';
 export { LabelText } from "./dist/inputs/LabelText"
 export { Code } from "./dist/semantic/Code"
 export { Stack } from "./dist/layouts/Stack"
+export {
+  Accordion,
+  AccordionItem,
+  AccordionButton
+} from "./dist/other/Accordion"
