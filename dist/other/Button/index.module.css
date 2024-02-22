@@ -55,7 +55,7 @@
   --hue: 210deg;
 }
 
-.mtui_button::after {
+/* .mtui_button::after {
   --gap: min(2%, 1.8px);
   content: "";
   position: absolute;
@@ -71,7 +71,7 @@
   border-radius: calc(0.5em - 1px);
   transition: 200ms;
   pointer-events: none;
-}
+} */
 
 .mtui_button:hover {
   --saturation: 60%;
