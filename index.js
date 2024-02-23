@@ -24,3 +24,9 @@ export {
   AccordionItem,
   AccordionButton
 } from "./dist/other/Accordion"
+
+export {
+  Breadcrumbs,
+  BreadcrumbsItem
+} from "./dist/navigation/Breadcrumbs"
+
