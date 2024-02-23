@@ -24,9 +24,14 @@ export {
   AccordionItem,
   AccordionButton
 } from "./dist/other/Accordion"
-
 export {
   Breadcrumbs,
   BreadcrumbsItem
 } from "./dist/navigation/Breadcrumbs"
-
+export {
+  Checkbox
+} from "./dist/inputs/Checkbox"
+export {
+  Radio,
+  RadioGroup
+} from "./dist/inputs/Radio"
