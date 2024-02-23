@@ -5,6 +5,7 @@ import classNames from "../../../tools/classNames";
 const defaultProps = {
   divider: "/",
   showLastDivider: true,
+  lastActive: false,
   children: null
 }
 
@@ -27,6 +28,7 @@ const Breadcrumbs = (props = defaultProps) => {
       "mtui-breadcrumbs": true,
       [s.breadcrumbs]: true,
       [s.last_visible] : props.showLastDivider,
+      [s.last_inactive] : !props.lastActive,
       [props.className]: !!props.className,
     })}
     style={inlineStyles}
