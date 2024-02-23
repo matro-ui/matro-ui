@@ -1,22 +1,32 @@
 import React from 'react'
 import * as s from './index.module.css';
+import classNames from '../../../tools/classNames';
 
 const defaultProps = {
-  value: false,
+  name: "",
   onChange: () => {},
-  name: ""
+  value: false,
+  disabled: false,
 }
 
 const Radio = (props = defaultProps) => {
-  const {name, value, onChange} = props;
+  const {name, value, disabled} = props;
+
+
   return (
-    <label className={s.parent}>
+    <label 
+      className={classNames({
+        ["mtui-radioitem"]: true,
+        [s.parent]: true,
+        [s.disabled]: disabled
+      })}
+    >
       {/* input hidden  */}
       <input {...{
         type: "radio", 
         checked: value === props.childProps.value, 
         className: s.input,
-        onChange: (e) => props.onChange(props.childProps.value), 
+        onChange: disabled ? () => {} : (e) => props.onChange(props.childProps.value), 
         name}}/>
 
       {/* input visible  */}

@@ -5,11 +5,15 @@ import * as s from './index.module.css';
 
 const defaultProps = {
   value: "",
-  onChange: () => {}
+  onChange: () => {},
 }
 
 const RadioGroup = (props = defaultProps) => {
   const {onChange, value} = props;
+  const defaultValue = value || props.defaultValue || "";
+  const [valueLoc, setValueLoc] = React.useState(defaultValue);
+  
+  
   const inlineStyles = {
     '--hue': colorToHue[props.color] ? colorToHue[props.color] 
               : props.hue ? props.hue 
@@ -20,7 +24,7 @@ const RadioGroup = (props = defaultProps) => {
   if(props.children) return (
     <div 
       className={classNames({
-        "mtui-radio": true,
+        "mtui-radiogroup": true,
         [s.radio]: true,
         [s["mtui_color_" + props.color]]: props.color,
         [props.className]: !!props.className,
@@ -30,8 +34,8 @@ const RadioGroup = (props = defaultProps) => {
       {React.Children.map(props.children, (child) => {
       return React.cloneElement(child, {
         childProps: child.props,
-        value:props.value,
-        onChange
+        value:onChange ? defaultValue : valueLoc,
+        onChange: onChange ?? setValueLoc
       });
     })}
     </div>

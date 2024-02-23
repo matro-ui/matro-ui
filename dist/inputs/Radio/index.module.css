@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin: 0.2em 0;
 }
 
 .label {
@@ -35,14 +36,26 @@
   height: 0.8em;
   width: 0.8em;
   margin-right: 0.3em;
-  border: 2px solid #c7c7c7;
+  border: 2px solid #e6e6e6;
   border-radius: 50px;
   transition: 0s;
 }
 
+@keyframes radio-appear {
+  0%{
+    transform: scale(0.5);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
 .checkbox::before {
   content: "";
-  display: block;
+  display: none;
   width: 50%;
   height: 50%;
   top: 25%;
@@ -50,11 +63,16 @@
   position: absolute;
   border-radius: inherit;
   background-color: #fff;
+  animation: radio-appear 150ms ease both;
 }
 
 .input:checked ~ .checkbox {
   background-color: var(--bg);
   border-color: var(--bg);
+}
+
+.input:checked ~ .checkbox::before {
+  display: block;
 }
 
 .input:checked ~ .checkbox:hover {
@@ -74,4 +92,20 @@
 
 .input:checked ~ .checkbox .svg {
   opacity: 1;
+}
+
+.disabled {
+  --bg: rgb(212, 218, 224);
+  --bg-hover: rgb(212, 218, 224);
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.disabled .checkbox {
+  background: var(--bg);
+  border-color: var(--bg);
+}
+
+.disabled .checkbox::before {
+  background-color: #7f848a;
 }
