@@ -22,7 +22,6 @@ const InputNumber = (props) => {
     style={inlineStyles}
     >
      {React.Children.map(props.children, (child) => {
-      console.log(child.type.displayName);
       return React.cloneElement(child, {
         childProps: child.props,
         onChange:props.onChange,

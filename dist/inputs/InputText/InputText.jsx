@@ -23,7 +23,6 @@ const InputText = (props) => {
     style={inlineStyles}
     >
      {React.Children.map(props.children, (child) => {
-      console.log(child);
       return React.cloneElement(child, {
         childProps: child.props,
         onChange:props.onChange,

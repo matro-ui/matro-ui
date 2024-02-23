@@ -9,7 +9,6 @@ const Accordion = (props) => {
 
   const childProps = {...props, style: inlineStyles}
 
-
   return (
     <section {...{
       ...childProps, 

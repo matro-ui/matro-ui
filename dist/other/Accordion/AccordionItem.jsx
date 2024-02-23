@@ -10,10 +10,12 @@ const AccordionItem = (props) => {
   return (
     <article>
       {React.Children.map((props.children), (child, i) => {
-        const childProps = {...child.props, isOpened}
+        const childProps = {...child.props}
 
-        if(child.type.displayName === "AccordionButton") 
+        if(child.type.displayName === "AccordionButton")  {
           childProps.onClick = toggleOpened;
+          return React.cloneElement(child, {...childProps, isOpened});
+        }
         else {
           childProps["data-visible"] = isOpened
           childProps.className = 

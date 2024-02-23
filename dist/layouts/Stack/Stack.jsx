@@ -6,11 +6,13 @@ import classNames from '../../../tools/classNames';
 const Stack = (props) => {
   const inlineStyles = {
     'gap': props.gap,
-    'flex-wrap': props.wrap === "reverse" ? "wrap-reverse" : props.wrap ? "wrap" : "nowrap",
+    'flexWrap': props.wrap === "reverse" ? "wrap-reverse" : props.wrap ? "wrap" : "nowrap",
     ...props.style
   }
   const itemProps = {...props};
   delete itemProps.children;
+  delete itemProps.wrap;
+  delete itemProps.column;
 
   if(props.children) return (
     <div 

@@ -3,7 +3,6 @@ import * as s from "../../index.module.css";
 
 
 const InputChildSelect = (props) => {
-  console.log(props);
   if(props.children) return (
     <select 
       className={s.inputSelect} 
