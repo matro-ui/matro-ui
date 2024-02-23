@@ -32,6 +32,13 @@
   overflow: hidden;
 }
 
+@-moz-document url-prefix() {
+  .mtui_inputtype {
+    --saturation: 58%;
+    --placeholder: hwb(var(--hue) calc(var(--saturation) - 20%) 40%);
+  }
+}
+
 .mtui_inputtype input {
   width: 100%;
   min-height: 40px;
@@ -46,6 +53,7 @@
 
   appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: textfield;
 }
 
 .mtui_inputtype input::placeholder {
@@ -54,6 +62,7 @@
 
 .mtui_inputtype input::-webkit-outer-spin-button,
 .mtui_inputtype input::-webkit-inner-spin-button {
+  appearance: none;
   -webkit-appearance: none;
 }
 

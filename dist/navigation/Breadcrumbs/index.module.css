@@ -36,3 +36,10 @@
 .last_visible .item:nth-last-child(1) .divider_child {
   display: flex;
 }
+
+.last_inactive .item:nth-last-child(1) a,
+.last_inactive .item:nth-last-child(1) {
+  color: #262626;
+  pointer-events: none;
+  text-decoration: none;
+}
