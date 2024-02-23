@@ -1,8 +1,30 @@
 import React from 'react'
+import * as s from './index.module.css';
 
-const Radio = () => {
+const defaultProps = {
+  value: false,
+  onChange: () => {},
+  name: ""
+}
+
+const Radio = (props = defaultProps) => {
+  const {name, value, onChange} = props;
   return (
-    <div>Radio</div>
+    <label className={s.parent}>
+      {/* input hidden  */}
+      <input {...{
+        type: "radio", 
+        checked: value === props.childProps.value, 
+        className: s.input,
+        onChange: (e) => props.onChange(props.childProps.value), 
+        name}}/>
+
+      {/* input visible  */}
+      <span className={s.checkbox}/>
+
+      {/* label  */}
+      {props.children ? <span className={s.label}>{props.children}</span> : ""}
+    </label>
   )
 }
 
