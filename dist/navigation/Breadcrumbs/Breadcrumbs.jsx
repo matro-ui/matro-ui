@@ -1,26 +1,45 @@
 import React from "react";
-import classNames from "../../tools/classNames";
 import * as s from "./index.module.css";
+import classNames from "../../../tools/classNames";
 
-const Button = (props) => {
+const defaultProps = {
+  divider: "/",
+  showLastDivider: true,
+  children: null
+}
+
+const Breadcrumbs = (props = defaultProps) => {
   const inlineStyles = {
-    '--hue': props.hue ?? 100,
     ...props.style
   }
+  const itemProps = {
+    ...props
+  }
+  delete itemProps.style;
+  delete itemProps.divider;
+  delete itemProps.showLastDivider;
+  delete itemProps.className;
+
   return (
-  <button 
-    {...props} 
+  <nav 
+    {...itemProps} 
     className={classNames({
-      "mtui-button": true,
-      [s.mtui_button]: true,
+      "mtui-breadcrumbs": true,
+      [s.breadcrumbs]: true,
+      [s.last_visible] : props.showLastDivider,
       [props.className]: !!props.className,
     })}
     style={inlineStyles}
   >
-    {props?.children}
-  </button>
+    {React.Children.map(props.children, (child) => {
+      return React.cloneElement(child, {
+        divider: props.divider,
+        ...child.props
+      });
+    })}
+  </nav>
   );
 };
 
-export default Button;
+export default Breadcrumbs;
 
