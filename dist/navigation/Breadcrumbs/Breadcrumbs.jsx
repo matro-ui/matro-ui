@@ -20,6 +20,7 @@ const Breadcrumbs = (props = defaultProps) => {
   delete itemProps.divider;
   delete itemProps.showLastDivider;
   delete itemProps.className;
+  delete itemProps.lastActive;
 
   return (
   <nav 
