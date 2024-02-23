@@ -10,9 +10,9 @@
 
   width: 100%;
   margin: 0;
-  padding: 0 1.2em;
+  padding: 0 1em;
   text-align: left;
-  min-height: 40px;
+  min-height: 2.6rem;
   background: transparent;
   border: none;
   border-bottom: 1px solid #eee;
@@ -24,12 +24,11 @@
 
 .button:hover {
   border-radius: 0.3em;
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgb(248, 249, 250);
 }
 
 .contentitem {
   transition: opacity 500ms ease;
-  font-size: 0.82em;
 }
 
 .visible {
@@ -70,6 +69,7 @@
   font-weight: 500;
   user-select: none;
 }
+
 .button_opened .icon {
   transform: rotate(180deg);
 }

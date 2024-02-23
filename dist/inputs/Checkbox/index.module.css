@@ -34,32 +34,32 @@
   height: 0.8em;
   width: 0.8em;
   margin-right: 0.3em;
-  border: 2px solid #e6e6e6;
+  border: 0.16rem solid #e6e6e6;
   border-radius: 3px;
   transition: 0s;
 }
 
-.input:checked ~ .checkbox {
+.input:checked~.checkbox {
   background-color: var(--bg);
   border-color: var(--bg);
 }
 
-.input:checked ~ .checkbox:hover {
+.input:checked~.checkbox:hover {
   border-color: var(--bg-hover);
   background-color: var(--bg-hover);
 }
 
-.input:focus-visible ~ .checkbox {
-  outline: 2px solid #bbd6ff;
+.input:focus-visible~.checkbox {
+  outline: 0.16rem solid #bbd6ff;
 }
 
-.svg{
+.svg {
   width: 100%;
   height: 100%;
   color: #fff;
 }
 
-.input:checked ~ .checkbox .svg {
+.input:checked~.checkbox .svg {
   opacity: 1;
 }
 

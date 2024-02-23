@@ -36,19 +36,21 @@
   height: 0.8em;
   width: 0.8em;
   margin-right: 0.3em;
-  border: 2px solid #e6e6e6;
+  border: 0.16rem solid rgb(218, 224, 239);
   border-radius: 50px;
   transition: 0s;
 }
 
 @keyframes radio-appear {
-  0%{
+  0% {
     transform: scale(0.5);
   }
-  50%{
+
+  50% {
     transform: scale(1.2);
   }
-  100%{
+
+  100% {
     transform: scale(1);
   }
 }
@@ -66,37 +68,37 @@
   animation: radio-appear 150ms ease both;
 }
 
-.input:checked ~ .checkbox {
+.input:checked~.checkbox {
   background-color: var(--bg);
   border-color: var(--bg);
 }
 
-.input:checked ~ .checkbox::before {
+.input:checked~.checkbox::before {
   display: block;
 }
 
-.input:checked ~ .checkbox:hover {
+.input:checked~.checkbox:hover {
   border-color: var(--bg-hover);
   background-color: var(--bg-hover);
 }
 
-.input:focus-visible ~ .checkbox {
-  outline: 2px solid #bbd6ff;
+.input:focus-visible~.checkbox {
+  outline: 0.16rem solid #bbd6ff;
 }
 
-.svg{
+.svg {
   width: 100%;
   height: 100%;
   color: #fff;
 }
 
-.input:checked ~ .checkbox .svg {
+.input:checked~.checkbox .svg {
   opacity: 1;
 }
 
 .disabled {
-  --bg: rgb(212, 218, 224);
-  --bg-hover: rgb(212, 218, 224);
+  --bg: rgb(218, 224, 239);
+  --bg-hover: rgb(218, 224, 239);
   cursor: not-allowed;
   opacity: 0.55;
 }
