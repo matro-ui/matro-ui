@@ -109,10 +109,14 @@
 
   position: relative;
   width: 1.8em;
+  min-width: 1.8em;
+  max-width: 1.8em;
   height: 1.1em;
   border-color: var(--toggle-bg);
   background-color: var(--toggle-bg);
   border: 0;
+  display: block;
+  box-sizing: border-box;
 }
 
 .toggle .checkbox::before {
@@ -120,15 +124,23 @@
   content: "";
   position: absolute;
   display: block;
-  top: 0.123em;
+  bottom: 0.12em;
   left: 0.121em;
-  bottom: 0.121em;
   width: var(--scale);
   height: var(--scale);
   border-radius: calc(var(--border-rad) - var(--border-rad) * 0.245);
   background-color: #fff;
   transition: left 100ms cubic-bezier(.57, .21, .69, 1.5);
+}
 
+@-moz-document url-prefix() {
+  .toggle .checkbox::before {
+    top: 0.125em;
+  }
+
+  .toggle .checkbox {
+    height: 1.102em;
+  }
 }
 
 .toggle .input:checked~.checkbox::before {
