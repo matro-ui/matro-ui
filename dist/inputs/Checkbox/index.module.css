@@ -131,6 +131,7 @@
   border-radius: calc(var(--border-rad) - var(--border-rad) * 0.245);
   background-color: #fff;
   transition: left 100ms cubic-bezier(.57, .21, .69, 1.5);
+
 }
 
 @-moz-document url-prefix() {
@@ -145,7 +146,6 @@
 
 .toggle .input:checked~.checkbox::before {
   left: calc(1.8em - var(--scale) - 0.12em);
-
 }
 
 .linear.toggle .checkbox::before {

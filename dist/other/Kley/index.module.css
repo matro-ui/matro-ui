@@ -1,0 +1,14 @@
+.key {
+  display: inline-block;
+  font-size: 0.84em;
+  font-weight: 600;
+  line-height: 100%;
+  padding: 2px 4px;
+  padding: 0.1em 0.3em;
+  background-color: #eff3f5;
+  border-radius: 0.3em;
+  border: 1px solid #9ca3ac;
+  border-width: 1px 1px 2px;
+  border-width: 1px 1px 2.6px;
+  border-width: 0.1em 0.1em 0.2em;
+}

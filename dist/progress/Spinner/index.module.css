@@ -1,0 +1,30 @@
+@keyframes kf_load {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.act {
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 50em;
+  border: 0.17em solid #494c55;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  animation: kf_load 600ms linear infinite both;
+  user-select: none;
+  pointer-events: none;
+}
+
+.text {
+  display: none;
+}

@@ -15,25 +15,29 @@
   min-height: 2.6rem;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
   font: inherit;
   color: inherit;
   cursor: pointer;
   transition: background 200ms ease;
 }
 
+article:nth-last-child(1) .button {
+  border-bottom: 1px solid #eee;
+}
+
 .button:hover {
-  border-radius: 0.3em;
   background-color: rgb(248, 249, 250);
 }
 
 .contentitem {
-  transition: opacity 500ms ease;
+  display: block;
+  padding: 0.5em 1em;
+  transition: 220ms ease, max-height 200ms ease, padding 0ms 0ms;
+  box-sizing: border-box;
 }
 
 .visible {
-  color: #5c5e64;
-  padding: 0.5em 1em;
   max-height: 500px;
   overflow-y: scroll;
   opacity: 1;
@@ -44,12 +48,7 @@
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-}
-
-.icon {
-  padding: 3px;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 50%;
+  transition: 120ms ease, max-height 200ms ease, padding 20ms ease 150ms;
 }
 
 .icon svg {
@@ -59,8 +58,8 @@
 
 .icon,
 .icon svg {
-  width: 0.9em;
-  height: 0.9em;
+  width: 1em;
+  height: 1em;
   transition: transform 100ms ease;
 }
 
@@ -76,4 +75,9 @@
 
 .button_opened .icon svg {
   margin-top: 1px;
+}
+
+article:nth-last-child(1) .button_opened,
+.button_opened {
+  border-bottom: 1px solid transparent;
 }

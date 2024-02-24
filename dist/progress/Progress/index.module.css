@@ -1,0 +1,19 @@
+.parent {
+  position: relative;
+  background-color: #e1e2e7;
+  overflow: hidden;
+  height: 8px;
+}
+
+.vis {
+  display: block;
+  background-color: #4a9fe0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.text {
+  display: none;
+}
