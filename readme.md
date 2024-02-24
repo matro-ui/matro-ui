@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/gerwld/matro-ui">
-    <img src="https://raw.githubusercontent.com/matro-ui/matro-ui.github.io/a136d87f6fc4e4837c49e0a55994208f43cb31ed/static/img/logo.svg" alt="Matro UI Logo" width="100" />
+    <img src="https://raw.githubusercontent.com/matro-ui/matro-ui.github.io/b666a7bcee19b26a1b6aa6874b2f3473b8298285/static/img/logo_git.svg" alt="Matro UI Logo" width="300" />
   </a>
 </p>
 <h1 align="center">Highly optimized UI Library for React</h1>
