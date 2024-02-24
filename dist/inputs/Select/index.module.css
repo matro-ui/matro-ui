@@ -1,25 +1,21 @@
 .parent {
   --border: rgb(221 221 245);
   --border-hover: rgb(195, 208, 237);
-  --height: 2.2em;
+  --height: 2.6em;
   --text: inherit;
 
-  display: flex;
+  position: relative;
+  display: block;
   width: fit-content;
-  align-items: center;
-  justify-content: flex-start;
-
-  padding: 0.2em 0.5em;
-  margin: 0 0 0.5em;
+  margin: 0.3em 0 0.5em;
   cursor: pointer;
-
-  border: 1px solid var(--border);
-  border-radius: 0.3em;
 }
 
 .select {
-  margin: 0 0.8em 0 0;
+  margin: 0;
+  padding: 0.2em 2em 0.2em 0.6em;
 
+  min-width: 140px;
   min-height: var(--height);
   line-height: 100%;
 
@@ -35,6 +31,11 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+
+  user-select: none;
+
+  border: 1px solid var(--border);
+  border-radius: 0.3em;
 }
 
 .parent:hover {
@@ -48,9 +49,9 @@
 }
 
 .icon {
-  padding: 3px;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
 }
 
 .icon svg {
@@ -60,7 +61,16 @@
 
 .icon,
 .icon svg {
-  width: 0.9em;
-  height: 0.9em;
+  width: 1em;
+  height: 1em;
   transition: transform 100ms ease;
+}
+
+.icon {
+  right: 0.4em;
+  top: calc(50% - 0.5em);
+}
+
+.select:focus-visible {
+  outline: 0.12em solid #bbd6ff;
 }

@@ -1,26 +1,15 @@
-import React from "react";
-import classNames from "../../../tools/classNames";
-import * as s from "./index.module.css";
+import React from 'react'
 
-const Button = (props) => {
-  const inlineStyles = {
-    '--hue': props.hue ?? 100,
-    ...props.style
-  }
-  return (
-  <button 
-    {...props} 
-    className={classNames({
-      "mtui-button": true,
-      [s.mtui_button]: true,
-      [props.className]: !!props.className,
-    })}
-    style={inlineStyles}
-  >
-    {props?.children}
-  </button>
-  );
-};
+const defaultProps = {
+  value: false,
+  disabled: false,
+}
 
-export default Button;
+const Select = (props = defaultProps) => {
+  const { value, disabled, defaultValue } = props;
+  if(props.children) return (
+      <option value={value} disabled={disabled} checked={value === defaultValue}>{props.children}</option>
+  )
+}
 
+export default Select
