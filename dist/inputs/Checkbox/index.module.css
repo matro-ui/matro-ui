@@ -28,14 +28,15 @@
 }
 
 .checkbox {
+  --border-rad: 0.2em;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 0.8em;
   width: 0.8em;
   margin-right: 0.3em;
-  border: 0.16rem solid #e6e6e6;
-  border-radius: 3px;
+  border: 0.16em solid #e6e6e6;
+  border-radius: var(--border-rad, 3px);
   transition: 0s;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .input:focus-visible~.checkbox {
-  outline: 0.16rem solid #bbd6ff;
+  outline: 0.12em solid #bbd6ff;
 }
 
 .svg {
@@ -77,4 +78,65 @@
 
 .disabled .checkbox::before {
   background-color: #7f848a;
+}
+
+/* TOGGLE */
+
+@keyframes toggle-active {
+  0% {
+    transform: scaleX(1.2);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes toggle-active-out {
+  0% {
+    transform: scaleX(1.2);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+
+.toggle .checkbox {
+  --border-rad: 2em;
+  --toggle-bg: rgb(212, 218, 224);
+
+  position: relative;
+  width: 1.8em;
+  height: 1.1em;
+  border-color: var(--toggle-bg);
+  background-color: var(--toggle-bg);
+  border: 0;
+}
+
+.toggle .checkbox::before {
+  --scale: calc(1.1em - 0.25em);
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0.123em;
+  left: 0.121em;
+  bottom: 0.121em;
+  width: var(--scale);
+  height: var(--scale);
+  border-radius: calc(var(--border-rad) - var(--border-rad) * 0.245);
+  background-color: #fff;
+  transition: left 100ms cubic-bezier(.57, .21, .69, 1.5);
+
+}
+
+.toggle .input:checked~.checkbox::before {
+  left: calc(1.8em - var(--scale) - 0.12em);
+
+}
+
+.linear.toggle .checkbox::before {
+  animation: none !important;
+  transition: left 100ms linear;
 }

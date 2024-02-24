@@ -5,11 +5,21 @@ import classNames from '../../../tools/classNames';
 const defaultProps = {
   value: false,
   onChange: () => {},
-  name: ""
+  name: "",
+  checked: false,
+  toggle: false,
+  linear: false
 }
 
 const Checkbox = (props = defaultProps) => {
-  const {name, value, disabled, checked} = props;
+  const {
+    name, 
+    value, 
+    disabled, 
+    checked, 
+    toggle, 
+    linear
+  } = props;
   const defaultValue = value || checked || "";
   const [init, setInit] = React.useState(false);
   const [valueLoc, setValueLoc] = React.useState(defaultValue);
@@ -33,7 +43,9 @@ const Checkbox = (props = defaultProps) => {
       className={classNames({
         ["mtui-checkbox"]: true,
         [s.parent]: true,
-        [s.disabled]: disabled
+        [s.disabled]: disabled,
+        [s.toggle]: toggle,
+        [s.linear]: linear,
       })}
     >
       {/* input hidden  */}
@@ -46,7 +58,7 @@ const Checkbox = (props = defaultProps) => {
 
       {/* input visible  */}
       <span className={s.checkbox}>
-      {(props.onChange ? defaultValue : valueLoc) ? (
+      {(props.onChange ? defaultValue : valueLoc) && !toggle ? (
         <svg 
           className={s.svg}
           viewBox="0 0 11 11" 
