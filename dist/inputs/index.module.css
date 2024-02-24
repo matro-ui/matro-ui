@@ -22,14 +22,10 @@
 
   box-sizing: border-box;
   overflow: hidden;
+  font: inherit;
 }
 
-@-moz-document url-prefix() {
-  .mtui_inputtype {
-    --saturation: 58%;
-    --placeholder: hwb(var(--hue) calc(var(--saturation) - 20%) 40%);
-  }
-}
+@-moz-document url-prefix() {}
 
 .mtui_inputtype input {
   width: 100%;

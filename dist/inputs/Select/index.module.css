@@ -1,0 +1,66 @@
+.parent {
+  --border: rgb(221 221 245);
+  --border-hover: rgb(195, 208, 237);
+  --height: 2.2em;
+  --text: inherit;
+
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 0.2em 0.5em;
+  margin: 0 0 0.5em;
+  cursor: pointer;
+
+  border: 1px solid var(--border);
+  border-radius: 0.3em;
+}
+
+.select {
+  margin: 0 0.8em 0 0;
+
+  min-height: var(--height);
+  line-height: 100%;
+
+  font: inherit;
+  font-weight: 500;
+  font-size: 0.9em;
+  color: var(--text);
+
+  appearance: none;
+  -moz-appearance: none;
+
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.parent:hover {
+  border-color: var(--border-hover);
+}
+
+.select:active,
+.select:focus,
+.select:hover {
+  outline: none;
+}
+
+.icon {
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+}
+
+.icon svg {
+  display: block;
+  margin: 0;
+}
+
+.icon,
+.icon svg {
+  width: 0.9em;
+  height: 0.9em;
+  transition: transform 100ms ease;
+}
