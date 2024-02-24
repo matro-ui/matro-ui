@@ -35,3 +35,10 @@ export {
   Radio,
   RadioGroup
 } from "./dist/inputs/Radio"
+export {
+  Select,
+  SelectGroup
+} from "./dist/inputs/Select"
+export { Kley } from "./dist/other/Kley"
+export { Spinner } from "./dist/progress/Spinner"
+export { Progress } from "./dist/progress/Progress"
