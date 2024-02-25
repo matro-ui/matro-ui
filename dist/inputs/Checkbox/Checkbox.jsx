@@ -1,10 +1,10 @@
 import React from 'react'
-import * as s from './index.module.css';
+import s from './index.module.css';
 import classNames from '../../../tools/classNames';
 
 const defaultProps = {
   value: false,
-  onChange: () => {},
+  onChange: () => { },
   name: "",
   checked: false,
   toggle: false,
@@ -13,11 +13,11 @@ const defaultProps = {
 
 const Checkbox = (props = defaultProps) => {
   const {
-    name, 
-    value, 
-    disabled, 
-    checked, 
-    toggle, 
+    name,
+    value,
+    disabled,
+    checked,
+    toggle,
     linear
   } = props;
   const defaultValue = value || checked || "";
@@ -25,13 +25,13 @@ const Checkbox = (props = defaultProps) => {
   const [valueLoc, setValueLoc] = React.useState(defaultValue);
 
   const onChange = (e) => {
-    if(!disabled) {
-      if(props.onChange) 
+    if (!disabled) {
+      if (props.onChange)
         props.onChange(!!e.target.checked);
-      else 
+      else
         setValueLoc(!!e.target.checked);
     }
-  } 
+  }
 
   // To prevent init anim
   React.useEffect(() => {
@@ -50,41 +50,42 @@ const Checkbox = (props = defaultProps) => {
     >
       {/* input hidden  */}
       <input {...{
-        type: "checkbox", 
-        checked: props.onChange ? defaultValue : valueLoc, 
+        type: "checkbox",
+        checked: props.onChange ? defaultValue : valueLoc,
         className: s.input,
-        onChange, 
-        name}}/>
+        onChange,
+        name
+      }} />
 
       {/* input visible  */}
       <span className={s.checkbox}>
-      {(props.onChange ? defaultValue : valueLoc) && !toggle ? (
-        <svg 
-          className={s.svg}
-          viewBox="0 0 11 11" 
-          style={{
-            display: "inline-block", 
-            fill: "none", 
-            strokeWidth: 2, 
-            stroke: "currentcolor", 
-          }}
-        >
+        {(props.onChange ? defaultValue : valueLoc) && !toggle ? (
+          <svg
+            className={s.svg}
+            viewBox="0 0 11 11"
+            style={{
+              display: "inline-block",
+              fill: "none",
+              strokeWidth: 2,
+              stroke: "currentcolor",
+            }}
+          >
 
-        {init ? 
-        <polyline>
-              <animate
-              attributeName="points"
-              dur="200ms"
-              from="2,4 5,7 5,7"
-              to="2,5 5,8 9.5,3"
-              fill="freeze"
-              begin="0ms"/>
-          </polyline>
-          : 
-          <polyline points="2,5 5,8 9.5,3"/>}
+            {init ?
+              <polyline>
+                <animate
+                  attributeName="points"
+                  dur="200ms"
+                  from="2,4 5,7 5,7"
+                  to="2,5 5,8 9.5,3"
+                  fill="freeze"
+                  begin="0ms" />
+              </polyline>
+              :
+              <polyline points="2,5 5,8 9.5,3" />}
 
-        </svg>
-      ) : null}
+          </svg>
+        ) : null}
       </span>
 
       {/* label  */}

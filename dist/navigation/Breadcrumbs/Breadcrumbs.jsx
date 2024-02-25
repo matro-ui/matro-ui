@@ -1,5 +1,5 @@
 import React from "react";
-import * as s from "./index.module.css";
+import s from "./index.module.css";
 import classNames from "../../../tools/classNames";
 
 const defaultProps = {
@@ -23,24 +23,24 @@ const Breadcrumbs = (props = defaultProps) => {
   delete itemProps.lastActive;
 
   return (
-  <nav 
-    {...itemProps} 
-    className={classNames({
-      "mtui-breadcrumbs": true,
-      [s.breadcrumbs]: true,
-      [s.last_visible] : props.showLastDivider,
-      [s.last_inactive] : !props.lastActive,
-      [props.className]: !!props.className,
-    })}
-    style={inlineStyles}
-  >
-    {React.Children.map(props.children, (child) => {
-      return React.cloneElement(child, {
-        divider: props.divider,
-        ...child.props
-      });
-    })}
-  </nav>
+    <nav
+      {...itemProps}
+      className={classNames({
+        "mtui-breadcrumbs": true,
+        [s.breadcrumbs]: true,
+        [s.last_visible]: props.showLastDivider,
+        [s.last_inactive]: !props.lastActive,
+        [props.className]: !!props.className,
+      })}
+      style={inlineStyles}
+    >
+      {React.Children.map(props.children, (child) => {
+        return React.cloneElement(child, {
+          divider: props.divider,
+          ...child.props
+        });
+      })}
+    </nav>
   );
 };
 

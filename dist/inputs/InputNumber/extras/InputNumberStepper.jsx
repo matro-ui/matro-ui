@@ -1,5 +1,5 @@
 import React from 'react'
-import * as s from "../../index.module.css";
+import s from "../../index.module.css";
 
 const InputNumberStepper = (props) => {
 
@@ -11,28 +11,28 @@ const InputNumberStepper = (props) => {
   }
 
   return (
-  <div className={s.stepper}>
-    {React.Children.map(props.children, (child) => {
-    return React.cloneElement(child, {
-      onDecrement,
-      onIncrement
-    });
-  })}
-  </div> 
+    <div className={s.stepper}>
+      {React.Children.map(props.children, (child) => {
+        return React.cloneElement(child, {
+          onDecrement,
+          onIncrement
+        });
+      })}
+    </div>
   );
 }
 
-const InputDecrementStepper = ({onDecrement}) => 
- <button onClick={onDecrement}>
-<span>▼</span></button>
+const InputDecrementStepper = ({ onDecrement }) =>
+  <button onClick={onDecrement}>
+    <span>▼</span></button>
 
-const InputIncrementStepper = (props) => 
- <button onClick={props.onIncrement}>
-<span>▲</span></button>
+const InputIncrementStepper = (props) =>
+  <button onClick={props.onIncrement}>
+    <span>▲</span></button>
 
 
 export {
-  InputNumberStepper, 
-  InputDecrementStepper, 
+  InputNumberStepper,
+  InputDecrementStepper,
   InputIncrementStepper
 };

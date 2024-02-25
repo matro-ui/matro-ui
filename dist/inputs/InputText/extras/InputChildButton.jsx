@@ -1,5 +1,5 @@
 import React from 'react'
-import * as s from "../../index.module.css";
+import s from "../../index.module.css";
 
 
 const InputChildButton = (props) => {
@@ -7,12 +7,12 @@ const InputChildButton = (props) => {
   delete itemProps.children;
   delete itemProps.childProps;
 
-  if(props.children) return (
-    <button 
-    {...itemProps}
-      className={s.inputChildButton} 
+  if (props.children) return (
+    <button
+      {...itemProps}
+      className={s.inputChildButton}
     >
-     {props.children} 
+      {props.children}
     </button>
   );
   return ""

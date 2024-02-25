@@ -1,7 +1,7 @@
 import React from 'react'
-import * as s from "./index.module.css";
+import s from "./index.module.css";
 
-const LabelText = ({children}) => {
+const LabelText = ({ children }) => {
   return (
     <div className={s.label}>{children}</div>
   )

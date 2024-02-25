@@ -1,5 +1,5 @@
 import React from 'react'
-import * as s from './index.module.css';
+import s from './index.module.css';
 import classNames from '../../../tools/classNames';
 
 const Spinner = (props) => {
@@ -12,7 +12,7 @@ const Spinner = (props) => {
       })}
       style={props.styles}
     >
-      <span className={s.act}/>
+      <span className={s.act} />
       <span className={s.text}>Loading...</span>
     </div>
   )

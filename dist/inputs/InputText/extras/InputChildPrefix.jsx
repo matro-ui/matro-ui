@@ -1,10 +1,10 @@
 import React from 'react'
-import * as s from "../../index.module.css";
+import s from "../../index.module.css";
 
 
-const InputChildPrefix = ({childProps}) => {
+const InputChildPrefix = ({ childProps }) => {
 
-  if(childProps.value) return (
+  if (childProps.value) return (
     <div className={s.inputPrefix}>{childProps.value}</div>
   )
   return ""
