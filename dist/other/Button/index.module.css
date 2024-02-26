@@ -22,7 +22,7 @@
   background-color: var(--fill);
   color: var(--text);
   cursor: pointer;
-  border: 0.0.16rem solid var(--border);
+  border: 0.16rem solid var(--border);
   box-shadow: 0 1px 1px 0px hwb(var(--hue) 30% 21%);
   transition: background-color 200ms ease, box-shadow 200ms ease,
     transform 200ms ease;
@@ -73,7 +73,7 @@
 .mtui_button:hover {
   --saturation: 62%;
   box-shadow: 0 2px 3px 0px hwb(var(--hue) 40% 31%);
-  border: 0.0.16rem solid var(--border);
+  border: 0.16rem solid var(--border);
 }
 
 .mtui_button:hover::after {
