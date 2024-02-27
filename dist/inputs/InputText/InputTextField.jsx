@@ -8,11 +8,11 @@ const InputTextField = (props) => {
   }
 
   return (
-  <input type="text"
-    {...itemProps}
-  >
-    {props?.children}
-  </input>
+    <input type="text"
+      {...itemProps}
+    >
+      {props?.children}
+    </input>
   );
 };
 
