@@ -17,12 +17,19 @@
   color: var(--text);
   cursor: pointer;
   border: 1px solid var(--border);
-  transition: background-color 100ms ease, box-shadow 200ms ease,
+  transition: background-color 0ms, box-shadow 200ms ease,
     transform 100ms ease;
 
   box-sizing: border-box;
   overflow: hidden;
   font: inherit;
+}
+
+[data-theme="dark"] .mtui_inputtype {
+  --fill: rgb(18, 18, 19);
+  --border: rgb(40, 41, 43);
+  --placeholder: rgb(155, 169, 183);
+  --border-hover: #44464b;
 }
 
 @-moz-document url-prefix() {}
@@ -122,11 +129,11 @@
   width: var(--stepper-width, 14%);
   padding: 0;
   box-sizing: border-box;
-  border-left: 0.16rem solid rgba(0, 0, 0, 0.0);
+  border-left: 0.06rem solid rgba(0, 0, 0, 0.0);
 }
 
 .stepper:hover {
-  border-left: 0.16rem solid var(--border);
+  border-left: 0.06rem solid var(--border);
 }
 
 .stepper button {
@@ -225,7 +232,13 @@
 
 .inputChildButton:hover,
 .inputSelect:hover {
-  background: rgb(212, 219, 237);
+  --bg-hover: rgb(212, 219, 237);
+  background: var(--bg-hover);
+}
+
+[data-theme="dark"] .inputChildButton,
+[data-theme="dark"] .inputSelect {
+  --bg-hover: rgb(41, 42, 44);
 }
 
 .inputSelect:focus {

@@ -11,9 +11,10 @@
   align-items: center;
 
   min-height: 2.2em;
-  padding: 0.5em 1.2em;
+  padding: 0.2em 0.5em;
   position: relative;
   font-size: 1.1em;
+  line-height: 100%;
   border-radius: 0.5em;
   background: radial-gradient(farthest-corner at bottom center,
       rgba(255, 255, 255, 0.2),
@@ -22,11 +23,30 @@
   background-color: var(--fill);
   color: var(--text);
   cursor: pointer;
-  border: 0.16rem solid var(--border);
+  border: 0.06rem solid var(--border);
   box-shadow: 0 1px 1px 0px hwb(var(--hue) 30% 21%);
-  transition: background-color 200ms ease, box-shadow 200ms ease,
-    transform 200ms ease;
+  transition: background-color 150ms ease, box-shadow 150ms ease,
+    transform 150ms ease, border 150ms ease;
   vertical-align: bottom;
+}
+
+.mtui_button>* {
+  width: fit-content;
+  max-height: 1.9rem;
+  line-height: 100%;
+}
+
+.content {
+  padding: 0 0.5em;
+  user-select: none;
+  pointer-events: none;
+}
+
+.default {
+  background: inherit;
+  color: inherit;
+  border: 1px solid rgba(170, 174, 180, 0.3);
+  box-shadow: none;
 }
 
 .mtui_button__icon {
@@ -54,7 +74,7 @@
   --hue: 210deg;
 }
 
-/* .mtui_button::after {
+.glossy::after {
   --gap: min(2%, 1.8px);
   content: "";
   position: absolute;
@@ -68,12 +88,18 @@
   border-radius: calc(0.5em - 1px);
   transition: 200ms;
   pointer-events: none;
-} */
+}
 
 .mtui_button:hover {
   --saturation: 62%;
   box-shadow: 0 2px 3px 0px hwb(var(--hue) 40% 31%);
-  border: 0.16rem solid var(--border);
+  border: 0.06rem solid var(--border);
+  transform: translateY(-1px);
+}
+
+.default:hover {
+  border: 1px solid rgba(170, 174, 180, 0.9);
+  box-shadow: none;
 }
 
 .mtui_button:hover::after {
@@ -86,9 +112,8 @@
 }
 
 .mtui_button:active {
-  transform: scale(0.96);
+  transform: scale(0.99);
   transition: transform 0ms;
-
 }
 
 .mtui_button:active,

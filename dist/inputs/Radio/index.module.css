@@ -40,7 +40,7 @@
   height: 0.8em;
   width: 0.8em;
   margin-right: 0.3em;
-  border: 0.16rem solid rgb(218, 224, 239);
+  border: 0.06rem solid rgb(218, 224, 239);
   border-radius: 50px;
   transition: 0s;
 }
@@ -87,7 +87,7 @@
 }
 
 .input:focus-visible~.checkbox {
-  outline: 0.16rem solid #bbd6ff;
+  outline: 0.06rem solid #bbd6ff;
 }
 
 .svg {
