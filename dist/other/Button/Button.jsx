@@ -3,7 +3,16 @@ import classNames from "../../../tools/classNames";
 import { colorToHue } from "../../../context";
 import s from "./index.module.css";
 
-const Button = (props) => {
+const defaultProps = {
+  hue: "" | 0,
+  isIcon: false,
+  glossy: false,
+  leftIcon: React.Component,
+  rightIcon: React.Component,
+  as: <button />
+}
+
+const Button = (props = defaultProps) => {
   const inlineStyles = {
     '--hue': colorToHue[props.color] ? colorToHue[props.color]
       : props.hue ? props.hue
@@ -11,22 +20,33 @@ const Button = (props) => {
     ...props.style
   }
   const childProps = { ...props }
-  delete childProps["isIcon"]
+  Object.keys(defaultProps).forEach(e => delete childProps[e])
 
-  return (
-    <button
-      {...childProps}
-      className={classNames({
-        "mtui-button": true,
-        [s.mtui_button]: true,
-        [s.mtui_button__icon]: props.isIcon,
-        [props.className]: !!props.className,
-      })}
-      style={inlineStyles}
-    >
-      {props?.children}
-    </button>
+  const className =
+    classNames({
+      "mtui-button": true,
+      [s.mtui_button]: true,
+      [s.default]: !props.hue && !props?.styles?.color,
+      [s.glossy]: props.glossy,
+      [s.mtui_button__icon]: props.isIcon,
+      [props.className]: !!props.className,
+    });
+
+  const content = (
+    <React.Fragment>
+      {props.leftIcon ?? ""}
+      <span className={s.content}>{props?.children}</span>
+      {props.rightIcon ?? ""}
+    </React.Fragment>
   );
+
+  return React.cloneElement(props.as, {
+    ...childProps,
+    children: content,
+    style: inlineStyles,
+    className,
+  });
+
 };
 
 export default Button;
