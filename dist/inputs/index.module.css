@@ -10,7 +10,7 @@
 
   position: relative;
   display: flex;
-  margin: 0 0 0.5em;
+  margin: 0;
   width: fit-content;
   border-radius: 0.3em;
   background-color: var(--fill);
@@ -23,6 +23,16 @@
   box-sizing: border-box;
   overflow: hidden;
   font: inherit;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.disabled input {
+  pointer-events: none;
+  user-select: none;
 }
 
 [data-theme="dark"] .mtui_inputtype {
@@ -239,6 +249,7 @@
 [data-theme="dark"] .inputChildButton,
 [data-theme="dark"] .inputSelect {
   --bg-hover: rgb(41, 42, 44);
+  background: var(--bg-hover);
 }
 
 .inputSelect:focus {
