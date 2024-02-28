@@ -29,7 +29,7 @@ export {
   BreadcrumbsItem
 } from "./dist/navigation/Breadcrumbs"
 export {
-  Checkbox
+  default as Checkbox
 } from "./dist/inputs/Checkbox"
 export {
   Radio,
