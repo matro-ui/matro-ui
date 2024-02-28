@@ -1,6 +1,6 @@
 {
   "name": "matro-ui",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "👁️ Highly optimized UI Components in one, tiny package for your React Applications.",
   "homepage": "https://matro-ui.github.io/docs/intro",
   "main": "index.js",
@@ -16,6 +16,7 @@
   "author": "gerwld",
   "license": "MIT",
   "dependencies": {
+    "clsx": "^2.1.0",
     "react-dom": "^18.2.0"
   },
   "peerDependencies": {
