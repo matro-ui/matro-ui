@@ -1,9 +1,17 @@
 import React from 'react'
-import classNames from "../../../tools/classNames";
+import clsx from "clsx";
 import s from "../index.module.css";
 import { colorToHue } from '../../../context';
 
+
 const InputNumber = (props) => {
+  const {
+    name,
+    disabled,
+    value,
+    onChange,
+    placeholder
+  } = props;
   const inlineStyles = {
     '--hue': colorToHue[props.color] ? colorToHue[props.color]
       : props.hue ? props.hue
@@ -13,10 +21,11 @@ const InputNumber = (props) => {
 
   return (
     <div
-      className={classNames({
-        "mtui-inputnum": true,
-        [s.mtui_inputtype]: true,
+      className={clsx(
+        "mtui-inputnum",
+        s.mtui_inputtype, {
         [s["mtui_color_" + props.color]]: props.color,
+        [s.disabled]: disabled,
         [props.className]: !!props.className,
       })}
       style={inlineStyles}
@@ -24,14 +33,21 @@ const InputNumber = (props) => {
       {React.Children.map(props.children, (child) => {
         return React.cloneElement(child, {
           childProps: child.props,
-          onChange: props.onChange,
-          value: props.value,
-          placeholder: props.placeholder,
-          name: props.name
+          value,
+          onChange,
+          placeholder,
+          name
         });
       })}
     </div>
   )
 }
+
+InputNumber.defaultProps = {
+  name: "",
+  disabled: false,
+  placeholder: "0"
+}
+
 
 export default InputNumber

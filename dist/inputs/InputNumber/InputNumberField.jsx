@@ -1,21 +1,17 @@
 import React from "react";
+export default ({ onChange, value, placeholder, name }) => {
+  const itemProps = { placeholder, name };
 
-const InputNumberField = (props) => {
-  const itemProps = {
-    onChange: (e) => props.onChange(e.target.value),
-    value: props.value,
-    placeholder: props.placeholder,
-    name: props.name
-  }
+  if (typeof onChange === "function")
+    itemProps.onChange = onChange;
+
+  if (value || value === "")
+    itemProps.value = value;
+
 
   return (
-  <input type="number"
-    {...itemProps}
-  >
-    {props?.children}
-  </input>
+    <input type="number"
+      {...itemProps}
+    />
   );
 };
-
-export default InputNumberField;
-
