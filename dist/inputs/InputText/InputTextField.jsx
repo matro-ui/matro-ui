@@ -1,20 +1,16 @@
 
-const InputTextField = (props) => {
-  const itemProps = {
-    onChange: (e) => props.onChange(e.target.value),
-    value: props.value,
-    placeholder: props.placeholder,
-    name: props.name
-  }
+const InputTextField = ({ value, placeholder, name, onChange }) => {
+  const itemProps = { type: "text", placeholder, name };
 
-  return (
-    <input type="text"
-      {...itemProps}
-    >
-      {props?.children}
-    </input>
-  );
+  if (typeof onChange === "function")
+    itemProps.onChange = onChange;
+
+  if (value || value === "")
+    itemProps.value = value;
+
+
+  return <input {...itemProps} />
 };
 
-export default InputTextField;
 
+export default InputTextField;
