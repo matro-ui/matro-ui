@@ -1,6 +1,7 @@
 .parent {
   --bg: #4a9fe0;
-  --bg-hover: #418bc3;
+  --bg-hover: var(--bg);
+  --bg-hover: color-mix(in srgb, var(--bg) 80%, transparent);
   --font-size: inherit;
   display: flex;
   align-items: center;
@@ -131,6 +132,10 @@
   box-sizing: border-box;
 }
 
+[data-theme="dark"] .toggle .checkbox {
+  --toggle-bg: rgb(84 88 93);
+}
+
 .toggle .checkbox::before {
   --scale: calc(1.1em - 0.25em);
   content: "";
@@ -143,7 +148,6 @@
   border-radius: calc(var(--border-rad) - var(--border-rad) * 0.245);
   background-color: #fff;
   transition: left 100ms cubic-bezier(.57, .21, .69, 1.5);
-
 }
 
 @-moz-document url-prefix() {
