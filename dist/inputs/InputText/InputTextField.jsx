@@ -1,6 +1,6 @@
 
-const InputTextField = ({ value, placeholder, name, onChange }) => {
-  const itemProps = { type: "text", placeholder, name };
+const InputTextField = ({ value, placeholder, name, onChange, disabled }) => {
+  const itemProps = { type: "text", placeholder, name, disabled };
 
   if (typeof onChange === "function")
     itemProps.onChange = onChange;

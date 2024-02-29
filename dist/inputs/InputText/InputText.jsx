@@ -30,6 +30,7 @@ const InputText = (props) => {
           onChange,
           value,
           placeholder,
+          disabled,
           name
         });
       })}
