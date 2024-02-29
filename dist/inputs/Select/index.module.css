@@ -1,27 +1,44 @@
 .parent {
-  --border: rgb(221 221 245);
-  --border-hover: rgb(195, 208, 237);
-  --height: 2.6em;
+  --border: #ddddf5;
+  --border-hover: #c3d0ed;
+  --height: 45px;
+  --height: min(3em, 45px);
   --text: inherit;
+  --gap: max(2%, 0.5em);
 
   position: relative;
   display: block;
-  width: fit-content;
+  width: 100%;
   margin: 0.3em 0 0.5em;
   cursor: pointer;
 }
 
+.fitContent {
+  --height: 45px;
+  --height: min(2.8em, 45px);
+  width: fit-content;
+}
+
+[data-theme="dark"] .parent {
+  --fill: #121213;
+  --border: #28292b;
+  --placeholder: #9ba9b7;
+  --border-hover: #44464b;
+}
+
 .select {
   margin: 0;
-  padding: 0.2em 2em 0.2em 0.6em;
+  padding: 0.2em 2em 0.2em var(--gap, 2%);
 
+  display: block;
+  width: 100%;
   min-width: 140px;
   min-height: var(--height);
   line-height: 100%;
 
   font: inherit;
   font-weight: 500;
-  font-size: 0.9em;
+  font-size: 1em;
   color: var(--text);
 
   appearance: none;
@@ -38,7 +55,7 @@
   border-radius: 0.3em;
 }
 
-.parent:hover {
+.parent:hover .select {
   border-color: var(--border-hover);
 }
 
@@ -67,7 +84,7 @@
 }
 
 .icon {
-  right: 0.4em;
+  right: var(--gap, 2%);
   top: calc(50% - 0.5em);
 }
 

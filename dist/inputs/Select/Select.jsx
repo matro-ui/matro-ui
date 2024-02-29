@@ -7,8 +7,8 @@ const defaultProps = {
 
 const Select = (props = defaultProps) => {
   const { value, disabled, defaultValue } = props;
-  if(props.children) return (
-      <option value={value} disabled={disabled} checked={value === defaultValue}>{props.children}</option>
+  if (props.children) return (
+    <option value={value} disabled={disabled} checked={value === defaultValue}>{props.children}</option>
   )
 }
 

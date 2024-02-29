@@ -1,6 +1,5 @@
 import React from 'react'
-import { colorToHue } from '../../../context';
-import classNames from '../../../tools/classNames';
+import clsx from "clsx";
 import s from './index.module.css';
 
 const defaultProps = {
@@ -9,7 +8,7 @@ const defaultProps = {
 }
 
 const SelectGroup = (props = defaultProps) => {
-  const { onChange, value } = props;
+  const { onChange, value, fitContent } = props;
   const defaultValue = value || props.defaultValue || "";
   const [valueLoc, setValueLoc] = React.useState(defaultValue);
 
@@ -27,11 +26,14 @@ const SelectGroup = (props = defaultProps) => {
 
   if (props.children) return (
     <label
-      className={classNames({
-        "mtui-selectgroup": true,
-        [s.parent]: true,
-        [props.className]: !!props.className,
-      })}
+      className={clsx([
+        "mtui-selectgroup",
+        [s.parent],
+        {
+          [props.className]: !!props.className,
+          [s.fitContent]: !!props.fitContent
+        }
+      ])}
       style={inlineStyles}
     >
       <select
