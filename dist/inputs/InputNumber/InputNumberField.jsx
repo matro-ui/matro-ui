@@ -1,6 +1,6 @@
 import React from "react";
-export default ({ onChange, value, placeholder, name }) => {
-  const itemProps = { placeholder, name };
+export default ({ onChange, value, placeholder, name, disabled }) => {
+  const itemProps = { placeholder, name, disabled };
 
   if (typeof onChange === "function")
     itemProps.onChange = onChange;
