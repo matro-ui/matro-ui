@@ -1,20 +1,17 @@
 .parent {
   --bg: #4a9fe0;
-  --bg-hover: #418bc3;
+  --bg-hover: var(--bg);
+  --bg-hover: color-mix(in srgb, var(--bg) 80%, transparent);
   display: flex;
   align-items: center;
   cursor: pointer;
   margin: 0.2em 0;
 }
 
-.radio {
-  margin: 0 0 0.8em;
-}
-
 .label {
   user-select: none;
   pointer-events: none;
-  font-size: 0.88em;
+  font-size: 1em;
 }
 
 .input {
@@ -32,15 +29,17 @@
 }
 
 .checkbox {
-  flex: 0 0 0.8em;
+  --cb-size: 1.18em;
+  --v-size: 0.58em;
+  flex: 0 0 var(--cb-size, 20px);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 0.8em;
-  width: 0.8em;
-  margin-right: 0.3em;
-  border: 0.06rem solid rgb(218, 224, 239);
+  height: var(--cb-size, 20px);
+  width: var(--cb-size, 20px);
+  margin-right: 0.4em;
+  border: 0.1em solid rgb(218, 224, 239);
   border-radius: 50px;
   transition: 0s;
 }
@@ -62,10 +61,11 @@
 .checkbox::before {
   content: "";
   display: none;
-  width: 50%;
-  height: 50%;
-  top: 25%;
-  left: 25%;
+  width: var(--v-size, 10px);
+  height: var(--v-size, 10px);
+  top: calc(50% - (var(--v-size) / 2) + 0.2px);
+  left: calc(50% - (var(--v-size) / 2) + 0.2px);
+
   position: absolute;
   border-radius: inherit;
   background-color: #fff;

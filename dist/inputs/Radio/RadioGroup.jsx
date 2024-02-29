@@ -35,7 +35,8 @@ const RadioGroup = (props = defaultProps) => {
         return React.cloneElement(child, {
           childProps: child.props,
           value: onChange ? defaultValue : valueLoc,
-          onChange: onChange ?? setValueLoc
+          onChange: onChange ?? setValueLoc,
+          styleParent: inlineStyles
         });
       })}
     </div>
