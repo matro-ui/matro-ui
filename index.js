@@ -42,3 +42,4 @@ export {
 export { Kley } from "./dist/other/Kley"
 export { Spinner } from "./dist/progress/Spinner"
 export { Progress } from "./dist/progress/Progress"
+export { default as Toggle } from "./dist/inputs/Toggle"
