@@ -16,7 +16,7 @@ const processCSS = async (filePath) => {
       },
     }),
   ]).process(css, { from: undefined });
-  return "123" + result.css;
+  return result.css;
 };
 
 // Function to recursively process and copy CSS files
@@ -46,4 +46,4 @@ const processAndCopyCSS = async (srcDir, destDir) => {
 };
 
 // Start processing CSS files in the src directory and copy them to the dist directory
-processAndCopyCSS('./src', './dist');
+processAndCopyCSS('./src', './dist/src');
