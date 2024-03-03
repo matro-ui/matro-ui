@@ -10,7 +10,7 @@ const AccordionButton = (props) => {
     })}>
       <span className={s.children}>{props.children}</span>
       {typeof props.setIcon === "function"
-        ? props.setIcon(props)
+        ? <span className={s.icon_custom}>{props.setIcon(props)}</span>
         : <i className={s.icon}>
           <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="200px" width="200px" xmlns="http://www.w3.org/2000/svg"><path fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="m112 184 144 144 144-144"></path></svg>
         </i>

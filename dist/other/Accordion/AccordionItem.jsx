@@ -14,7 +14,7 @@ const AccordionItem = (props) => {
 
         if (child.type.displayName === "AccordionButton") {
           childProps.onClick = toggleOpened;
-          return React.cloneElement(child, { ...childProps, isOpened });
+          return React.cloneElement(child, { ...childProps, isOpened, setIcon: props.setIcon });
         }
         else {
           childProps["data-visible"] = isOpened
