@@ -7,7 +7,8 @@
   "scripts": {
     "prepare": "mkdir -p ./dist && cp -r ./src ./context ./tools ./dist && cp index.js license readme.md ./dist && cp build.json ./dist/package.json",
     "build:css": "node build-css.js",
-    "build": "rm -rf ./dist && npm run prepare && npm run build:css"
+    "build": "rm -rf ./dist && npm run prepare && npm run build:css",
+    "gdeploy": "npm run build && cd dist && npm publish --access public"
   },
   "keywords": [
     "ui",
