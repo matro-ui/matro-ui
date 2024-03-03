@@ -1,7 +1,8 @@
 .parent {
   --bg: #4a9fe0;
-  --bg-hover: var(--bg);
-  --bg-hover: color-mix(in srgb, var(--bg) 80%, transparent);
+  --bg-fallback: var(--bg);
+  --bg-main: color-mix(in srgb, var(--bg) 80%, transparent);
+  --bg-hover: var(--bg-main, var(--bg));
   --font-size: inherit;
   display: flex;
   align-items: center;
@@ -167,4 +168,22 @@
 .linear.toggle .checkbox::before {
   animation: none !important;
   transition: left 100ms linear;
+}
+
+@media only screen and (max-width: 440px) {
+  .checkbox {
+    font-size: min(1.2rem, 24px);
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .checkbox {
+    font-size: min(1.15rem, 22px);
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .checkbox {
+    font-size: min(1.1rem, 20px);
+  }
 }

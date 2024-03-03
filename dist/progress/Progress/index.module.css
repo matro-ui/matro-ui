@@ -1,13 +1,16 @@
 .parent {
+  --hue: 206;
   position: relative;
   background-color: #e1e2e7;
   overflow: hidden;
-  height: 8px;
+  height: 5px;
+  border-radius: 3px;
 }
 
 .vis {
+
   display: block;
-  background-color: #4a9fe0;
+  background-color: hsl(var(--hue), 71%, 58%);
   height: 100%;
   position: absolute;
   left: 0;

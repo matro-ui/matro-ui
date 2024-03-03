@@ -11,10 +11,10 @@
   align-items: center;
 
   min-height: 2.2em;
-  padding: 0.2em 0.5em;
+  padding: 0.2em 0.6em 0.2em 0.5em;
   position: relative;
   font-size: 1.1em;
-  line-height: 100%;
+  line-height: 115%;
   border-radius: 0.5em;
   background: radial-gradient(farthest-corner at bottom center,
       rgba(255, 255, 255, 0.2),
@@ -30,9 +30,14 @@
   vertical-align: bottom;
 }
 
+body .mtui_button:hover,
+body .mtui_button {
+  text-decoration: none !important;
+}
+
 .mtui_button>* {
   width: fit-content;
-  margin: 0 0.3em 0 0;
+  margin: 0;
   max-height: 1.9rem;
   line-height: 100%;
 }
@@ -43,16 +48,21 @@
 
 .content {
   padding: 0;
-  margin-top: -1px;
+  margin-top: -0.3px;
   user-select: none;
   pointer-events: none;
 }
 
 .default {
+  --text: inherit;
   background: inherit;
   color: inherit;
   border: 1px solid rgba(170, 174, 180, 0.3);
   box-shadow: none;
+}
+
+body .mtui_button:hover {
+  color: var(--text);
 }
 
 .mtui_button__icon {
@@ -62,10 +72,30 @@
   overflow: hidden;
 }
 
+body .mtui_button__icon .icon {
+  margin: 0;
+}
+
 .mtui_button svg {
-  flex: 1;
-  font-size: 1.1em;
-  height: 1.2em;
+  max-width: 2rem;
+  margin: 0;
+  flex: 0 1 auto;
+  font-size: 1.2em;
+  height: max(1.2em, 100%);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon:nth-child(1) {
+  margin: 0 0.42rem 0 -0.05rem;
+}
+
+.icon:nth-last-child(1) {
+  margin: 0 -0.05rem 0 0.42rem;
 }
 
 .mtui_button.color-red {
@@ -80,6 +110,23 @@
   --hue: 210deg;
 }
 
+body .color_black:hover,
+.color_black {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+  box-shadow: 0 2px 4px 0px rgb(141, 143, 145);
+}
+
+body .color_black:hover {
+  box-shadow: 0 2px 4px 0px rgb(74, 75, 76);
+}
+
+[data-theme="dark"] body .color_black:hover,
+[data-theme="dark"] .color_black {
+  box-shadow: none;
+}
+
 .glossy::after {
   --gap: min(2%, 1.8px);
   content: "";
@@ -89,8 +136,8 @@
   width: calc(100% - (var(--gap) * 2));
   height: 40%;
   background: linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.1));
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.2));
   border-radius: calc(0.5em - 1px);
   transition: 200ms;
   pointer-events: none;
@@ -101,6 +148,7 @@
   box-shadow: 0 2px 3px 0px hwb(var(--hue) 40% 31%);
   border: 0.06rem solid var(--border);
   transform: translateY(-1px);
+  color: inherit;
 }
 
 .default:hover {

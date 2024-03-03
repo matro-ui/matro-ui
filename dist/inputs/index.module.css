@@ -23,6 +23,7 @@
   box-sizing: border-box;
   overflow: hidden;
   font: inherit;
+  font-size: 1.1em;
 }
 
 .disabled {
@@ -264,11 +265,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 110%;
   color: var(--text);
   min-height: 2.2em;
-  min-width: 2.2em;
+  min-width: min(3em, 60px);
   padding: 0;
   margin: 0;
 
@@ -311,4 +312,25 @@
 
 .inputChildIcon svg {
   font-size: 1.2em;
+}
+
+@media only screen and (max-width: 440px) {
+  .mtui_inputtype {
+    width: 100%;
+    font-size: min(1.2rem, 21px);
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .mtui_inputtype {
+    width: 100%;
+    font-size: min(1.15rem, 18px);
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .mtui_inputtype {
+    width: 100%;
+    font-size: min(1.1rem, 16px);
+  }
 }

@@ -13,7 +13,7 @@
 .divider {
   display: block;
   font: inherit;
-  padding: 0 0.28em;
+  padding: 0 0.52em;
 }
 
 .divider_child {
@@ -22,11 +22,32 @@
   justify-content: center;
 }
 
+.link a {
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.2em;
+  text-decoration-color: #d1beff;
+}
+
+.link a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+  text-decoration-color: #d7c6fe;
+}
+
+[data-theme="dark"] .link a {
+  text-decoration-color: #52476f;
+}
+
+[data-theme="dark"] .link a:hover {
+  text-decoration-color: #594d78;
+}
+
 .link a:hover,
 .link a {
   font: inherit;
   text-decoration: none;
-  color: var(--color-primary-a50, #4078d2);
+  color: inherit;
 }
 
 .link a:hover {

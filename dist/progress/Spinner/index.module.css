@@ -12,17 +12,50 @@
   }
 }
 
+.parent {
+  --color: #494c55;
+  --w: 1.4em;
+  --hue: 200;
+}
+
 .act {
   display: block;
-  width: 1.4em;
-  height: 1.4em;
+  width: var(--w, 21px);
+  height: var(--w, 21px);
   border-radius: 50em;
-  border: 0.17em solid #494c55;
+  border: 0.17em solid var(--color);
   border-top-color: transparent;
   border-left-color: transparent;
   animation: kf_load 600ms linear infinite both;
   user-select: none;
   pointer-events: none;
+}
+
+.isColor .act {
+  --color: hsl(var(--hue), 78%, 51%);
+  border: 0.17em solid var(--color);
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+.size_xs {
+  --w: 1em;
+}
+
+.size_s {
+  --w: 1.4em;
+}
+
+.size_m {
+  --w: 1.2rem;
+}
+
+.size_l {
+  --w: 2rem;
+}
+
+.size_xl {
+  --w: 4rem;
 }
 
 .text {
