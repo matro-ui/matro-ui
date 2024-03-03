@@ -1,5 +1,7 @@
 node_modules
 pnpm-lock.yaml
+package-lock.yaml
 .DS_Store
 */.DS_Store
 **/.DS_Store
+dist
