@@ -1,5 +1,8 @@
-export { default as Button } from './dist/other/Button';
-export { default as ButtonIcon } from './dist/other/Button/ButtonIcon';
+export {
+  Button,
+  ButtonIcon
+} from './dist/other/Button/';
+export { default as LinkButton } from './dist/navigation/Link/LinkButton';
 export {
   InputNumber,
   InputNumberField,
@@ -18,7 +21,7 @@ export {
 } from './dist/inputs/InputText';
 export { LabelText } from "./dist/inputs/LabelText"
 export { Code } from "./dist/semantic/Code"
-export { Stack } from "./dist/layouts/Stack"
+export { Stack } from "./dist/layout/Stack"
 export {
   Accordion,
   AccordionItem,
@@ -39,7 +42,8 @@ export {
   Select,
   SelectGroup
 } from "./dist/inputs/Select"
-export { Kley } from "./dist/other/Kley"
+export { Key } from "./dist/other/Key"
 export { Spinner } from "./dist/progress/Spinner"
 export { Progress } from "./dist/progress/Progress"
 export { default as Toggle } from "./dist/inputs/Toggle"
+export { default as Switch } from "./dist/other/Switch"
