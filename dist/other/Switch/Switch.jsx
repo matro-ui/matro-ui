@@ -1,9 +1,3 @@
 import React from 'react'
-
-const Switch = () => {
-  return (
-    <div>Switch</div>
-  )
-}
-
-export default Switch
+import Checkbox from '../../inputs/Checkbox'
+export default (props) => <Checkbox {...{ ...props, toggle: true }} />
