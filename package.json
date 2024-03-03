@@ -3,24 +3,23 @@
   "version": "0.7.8",
   "description": "👁️ Highly optimized UI Components in one, tiny package for your React Applications.",
   "homepage": "https://matro-ui.github.io/docs/intro",
+  "author": "gerwld",
+  "license": "MIT",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "ui",
     "library",
     "modules",
     "reactjs"
   ],
-  "author": "gerwld",
-  "license": "MIT",
   "dependencies": {
     "clsx": "^2.1.0",
-    "react-dom": "^18.2.0"
+    "postcss-preset-env": "^9.4.0",
+    "uuid": "^9.0.1"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react-dom": "^16.8.0",
+    "react": "^16.8.0"
   },
   "repository": {
     "type": "git",
