@@ -1,48 +1,45 @@
 import React from "react";
 import s from "./index.module.css";
-import classNames from "../../../tools/classNames";
+import clsx from "clsx";
 
 const defaultProps = {
   divider: "/",
-  showLastDivider: true,
+  showLastDivider: false,
   lastActive: false,
-  children: null
+  children: null,
+  className: ""
 }
 
 const Breadcrumbs = (props = defaultProps) => {
-  const inlineStyles = {
-    ...props.style
-  }
   const itemProps = {
     ...props
   }
-  delete itemProps.style;
-  delete itemProps.divider;
-  delete itemProps.showLastDivider;
-  delete itemProps.className;
-  delete itemProps.lastActive;
 
+  Object.keys(defaultProps).forEach(prop => delete itemProps[prop])
   return (
     <nav
       {...itemProps}
-      className={classNames({
-        "mtui-breadcrumbs": true,
-        [s.breadcrumbs]: true,
-        [s.last_visible]: props.showLastDivider,
-        [s.last_inactive]: !props.lastActive,
-        [props.className]: !!props.className,
-      })}
-      style={inlineStyles}
+      className={clsx([
+        "mtui-breadcrumbs",
+        s.breadcrumbs,
+        props.className,
+        {
+          [s.last_visible]: props.showLastDivider,
+          [s.last_inactive]: !props.lastActive,
+        }
+      ])}
     >
       {React.Children.map(props.children, (child) => {
         return React.cloneElement(child, {
-          divider: props.divider,
+          divider: props?.divider,
           ...child.props
         });
       })}
     </nav>
   );
 };
+
+Breadcrumbs.defaultProps = defaultProps;
 
 export default Breadcrumbs;
 
