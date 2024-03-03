@@ -1,0 +1,37 @@
+{
+  "name": "matro-ui-build",
+  "version": "1.0.0",
+  "description": "Dev & build scripts for matro-ui.",
+  "homepage": "https://matro-ui.github.io/docs/intro",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "cp -r ./src ./dist && cp -r ./context ./tools ./dist && cp index.js license readme.md ./dist && cp build.json ./dist/package.json",
+    "build:css": "node build-css.js",
+    "build": "rm -rf ./dist && npm run prepare && npm run build:css"
+  },
+  "keywords": [
+    "ui",
+    "library",
+    "modules",
+    "reactjs"
+  ],
+  "author": "gerwld",
+  "license": "MIT",
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matro-ui/matro-ui"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "postcss-preset-env": "^9.4.0"
+  }
+}
