@@ -32,7 +32,7 @@ export {
   BreadcrumbsItem
 } from "./src/navigation/Breadcrumbs"
 export {
-  default as Checkbox
+  Checkbox
 } from "./src/inputs/Checkbox"
 export {
   Radio,
