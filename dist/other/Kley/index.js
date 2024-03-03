@@ -1,1 +1,0 @@
-export { default as Kley } from "./Kley";
