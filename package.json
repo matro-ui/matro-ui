@@ -5,7 +5,7 @@
   "homepage": "https://matro-ui.github.io/docs/intro",
   "main": "index.js",
   "scripts": {
-    "prepare": "cp -r ./src ./dist && cp -r ./context ./tools ./dist && cp index.js license readme.md ./dist && cp build.json ./dist/package.json",
+    "prepare": "mkdir -p ./dist && cp -r ./src ./context ./tools ./dist && cp index.js license readme.md ./dist && cp build.json ./dist/package.json",
     "build:css": "node build-css.js",
     "build": "rm -rf ./dist && npm run prepare && npm run build:css"
   },
