@@ -14,12 +14,14 @@ const Progress = (props) => {
   } = props;
 
   const inlineStyles = {
-    '--hue': colorToHue[colorScheme] ? colorToHue[colorScheme]
+    '--hue': (colorToHue[colorScheme] > -1) ? colorToHue[colorScheme]
       : props.hue ? props.hue
-        : 160,
-    'height': height.indexOf("px") !== -1 ? height : height + "px",
+        : 220,
     ...props.style
   }
+
+  if (height)
+    inlineStyles["height"] = height.indexOf("px") !== -1 ? height : height + "px"
 
   return (
     <div
