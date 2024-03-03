@@ -18,8 +18,6 @@ const Stack = (props) => {
   if (typeof padding === "string")
     inlineStyles["padding"] = isNaN(padding) ? padding : padding + "px";
 
-  console.log(flex);
-
   const itemProps = { ...props };
   delete itemProps.children;
   delete itemProps.wrap;

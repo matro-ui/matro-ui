@@ -12,7 +12,6 @@ const defaultProps = {
 
 const Radio = (props = defaultProps) => {
   const { name, value, disabled, styleParent } = props;
-  console.log(styleParent);
 
 
   return (
