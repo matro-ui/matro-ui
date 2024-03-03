@@ -7,12 +7,13 @@ const defaultProps = {
   hue: "" | 0,
   isIcon: false,
   glossy: false,
-  leftIcon: React.Component,
-  rightIcon: React.Component,
+  leftIcon: null,
+  rightIcon: null,
   as: <button />
 }
 
-const Button = (props = defaultProps) => {
+const Button = (props) => {
+  const { leftIcon, rightIcon } = props;
   const inlineStyles = {
     '--hue': colorToHue[props.color] ? colorToHue[props.color]
       : props.hue ? props.hue
@@ -28,15 +29,16 @@ const Button = (props = defaultProps) => {
       [s.mtui_button]: true,
       [s.default]: !props.hue && !props?.styles?.color,
       [s.glossy]: props.glossy,
+      [s.color_black]: props.colorScheme === "black",
       [s.mtui_button__icon]: props.isIcon,
       [props.className]: !!props.className,
     });
 
   const content = (
     <React.Fragment>
-      {props.leftIcon ?? ""}
+      {leftIcon ? <span className={s.icon}>{leftIcon}</span> : ""}
       <span className={s.content}>{props?.children}</span>
-      {props.rightIcon ?? ""}
+      {rightIcon ? <span className={s.icon}>{rightIcon}</span> : ""}
     </React.Fragment>
   );
 
@@ -46,8 +48,9 @@ const Button = (props = defaultProps) => {
     style: inlineStyles,
     className,
   });
-
 };
+
+Button.defaultProps = defaultProps;
 
 export default Button;
 
