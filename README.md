@@ -14,6 +14,8 @@
   <!-- <img alt="Github Stars" src="https://badgen.net/github/stars/gerwld/matro-ui" /> -->
 </p>
 
+For comprehensive documentation on how to utilize Matro UI components effectively, please visit our [documentation site](https://matro-ui.github.io/docs/intro). Whether you're a beginner or an experienced developer, our documentation provides clear instructions and examples to help you get started quickly.
+
 ## Installation:
 ```sh
 ##  with npm
@@ -29,7 +31,7 @@ pnpm i matro-ui
 bun add matro-ui
 ```
 
-## Features
+## Core Features
 
 - Streamlined UI components for building React applications.
 - Lightweight and optimized for performance.
@@ -53,17 +55,12 @@ const App = () => {
 export default App;
 ```
 
-## Documentation
-
-For detailed documentation on how to use Matro UI components, please visit our [documentation site](https://matro-ui.github.io/docs/intro).
-
 ## Support
-
-For support, questions, or feedback, please [create an issue](https://github.com/gerwld/matro-ui/issues/new) or send a bug report on [pjaworski.dev@gmail.com](pjaworski.dev@gmail.com).
+For support, questions, or feedback, please don't hesitate to [create an issue](https://github.com/gerwld/matro-ui/issues/new) or send a bug report to [pjaworski.dev@gmail.com](pjaworski.dev@gmail.com).
 
 ## Contributors
 
-We welcome contributions from the community! See our [contribution guidelines](CONTRIBUTING.md) for more details.
+We welcome contributions from the community! Whether it's reporting bugs, submitting feature requests, or contributing code, please refer to our [contribution guidelines](CONTRIBUTING.md) for more details.
 
 ## License
 
