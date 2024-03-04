@@ -1,5 +1,6 @@
 {
   "name": "matro-ui-build",
+  "private": "true",
   "version": "1.0.0",
   "description": "Dev & build scripts for matro-ui.",
   "homepage": "https://matro-ui.github.io/docs/intro",
