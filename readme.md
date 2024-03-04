@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://github.com/gerwld/matro-ui">
-    <img src="https://raw.githubusercontent.com/matro-ui/matro-ui.github.io/b666a7bcee19b26a1b6aa6874b2f3473b8298285/static/img/logo_git.svg" alt="Matro UI Logo" width="300" />
+    <img src="https://raw.githubusercontent.com/matro-ui/matro-ui.github.io/c42a098f42449012d9f1d46569ceb8ae38623ca8/static/img/logo_git.svg" alt="Matro UI Logo" width="300" />
   </a>
 </p>
-<h1 align="center">Highly optimized UI Library for React</h1>
+<h1 align="center">🐋 Streamlined UI Library for React Apps.</h1>
 <br />
 <p align="center">
   <img alt="Bundle Size" src="https://badgen.net/packagephobia/publish/matro-ui"/>
