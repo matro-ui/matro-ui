@@ -162,6 +162,10 @@
   vertical-align: baseline;
 }
 
+[data-theme="dark"] .stepper button {
+  color: rgba(255, 255, 255, 0.12);
+}
+
 .stepper button:active {
   font-size: 0.5em;
   line-height: 0.5em;
