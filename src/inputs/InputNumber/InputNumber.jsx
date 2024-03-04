@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import clsx from "clsx";
 import s from "../index.module.css";
 import { colorToHue } from '../../../context';
@@ -19,6 +19,14 @@ const InputNumber = (props) => {
     ...props.style
   }
 
+  const [locValue, setLocValue] = useState(value);
+
+  const handleChange = (e) => {
+    console.log(e);
+    setLocValue(e)
+    onChange(e);
+  }
+
   return (
     <div
       className={clsx(
@@ -33,8 +41,8 @@ const InputNumber = (props) => {
       {React.Children.map(props.children, (child) => {
         return React.cloneElement(child, {
           childProps: child.props,
-          value,
-          onChange,
+          value: locValue,
+          onChange: handleChange,
           placeholder,
           name
         });
@@ -44,6 +52,8 @@ const InputNumber = (props) => {
 }
 
 InputNumber.defaultProps = {
+  value: "0",
+  onChange: () => { },
   name: "",
   disabled: false,
   placeholder: "0"
