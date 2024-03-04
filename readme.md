@@ -68,4 +68,5 @@ We welcome contributions from the community! See our [contribution guidelines](C
 ## License
 
 Matro UI is open-source software licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+<br/>
 MIT © [Patryk Jaworski](https://github.com/gerwld)
