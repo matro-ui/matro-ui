@@ -6,11 +6,11 @@
 <h1 align="center">🐋 Streamlined UI Library for React Apps.</h1>
 <br />
 <p align="center">
-  <img alt="Bundle Size" src="https://badgen.net/packagephobia/publish/matro-ui"/>
+  <a href="https://packagephobia.com/result?p=matro-ui"><img alt="Bundle Size" src="https://badgen.net/packagephobia/publish/matro-ui"/></a>
   <img alt="Github Checks" src="https://badgen.net/github/checks/nodejs/node"/>
-  <a href="https://github.com/matro-ui/matro-ui/blob/main/license"><img alt="MIT License" src="https://img.shields.io/github/license/gerwld/matro-ui"/></a>
-  <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/matro-ui.svg?style=flat"/>
-  <img alt="Version" src="https://badgen.net/npm/v/matro-ui" />
+  <a href="https://github.com/matro-ui/matro-ui/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/gerwld/matro-ui"/></a>
+  <a href="https://www.npmjs.com/package/matro-ui"><img alt="NPM Downloads" src="https://img.shields.io/npm/dm/matro-ui.svg?style=flat"/></a>
+  <a href="https://www.npmjs.com/package/matro-ui"><img alt="Version" src="https://badgen.net/npm/v/matro-ui" /></a>
   <!-- <img alt="Github Stars" src="https://badgen.net/github/stars/gerwld/matro-ui" /> -->
 </p>
 
